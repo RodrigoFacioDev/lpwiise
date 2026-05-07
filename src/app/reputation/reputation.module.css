@@ -1,0 +1,106 @@
+.main {
+  padding: 8rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.header {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: var(--accent-emerald);
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 1.25rem;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.statCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.statLabel {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.tierName {
+  font-size: 2.5rem;
+  color: var(--accent-emerald);
+  margin-bottom: 1.5rem;
+}
+
+.statValue {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.statSubText {
+  color: var(--text-secondary);
+}
+
+.history {
+  margin-top: 4rem;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+}
+
+.historyList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.historyContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.actionName {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.historyDate {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.impactValue {
+  color: var(--accent-emerald);
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+}

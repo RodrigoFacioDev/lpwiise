@@ -1,0 +1,85 @@
+.button {
+  position: relative;
+  padding: 12px 32px;
+  border-radius: 12px;
+  border: none;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+.primary {
+  background: var(--accent-emerald);
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+}
+
+.primary:hover {
+  box-shadow: 0 0 20px var(--accent-emerald-glow);
+  transform: translateY(-2px);
+}
+
+.secondary {
+  background: rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+.secondary .content {
+  color: var(--text-primary);
+}
+
+.secondary:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.glass {
+  background: var(--bg-glass);
+  border: 1px solid var(--border-glass);
+  backdrop-filter: blur(10px);
+}
+
+.glass .content {
+  color: var(--text-primary);
+}
+
+.glass:hover {
+  background: rgba(0, 0, 0, 0.03);
+  border-color: var(--accent-emerald);
+}
+
+/* Liquid Metal Effect */
+.liquid {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.1) 40%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.1) 60%,
+    transparent 80%
+  );
+  transition: all 0.6s ease;
+  transform: translate(-100%, -100%) rotate(45deg);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.button:hover .liquid {
+  transform: translate(50%, 50%) rotate(45deg);
+}
