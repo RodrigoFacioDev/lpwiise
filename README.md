@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# WIISE LP - Landing Page & Social Contribution Platform
 
-## Getting Started
+Esta é a plataforma de contribuição social da **WIISE**, construída com Next.js 16. O projeto permite que usuários reservem espaços para eventos sociais e projetos de impacto, integrando-se com o ecossistema WIISEWELL.
 
-First, run the development server:
+## 🚀 Como Começar
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### Pré-requisitos
+
+- **Node.js**: v18 ou superior
+- **Yarn** ou **NPM**
+- **Backend WIISEWELL**: O servidor backend deve estar rodando (geralmente na porta 3333)
+
+### Instalação
+
+1. Clone o repositório
+2. Instale as dependências:
+   ```bash
+   yarn install
+   # ou
+   npm install
+   ```
+
+### Variáveis de Ambiente
+
+Crie um arquivo `.env.local` na raiz do projeto com as seguintes variáveis:
+
+```env
+# URL base para chamadas de API (Frontend para Backend)
+NEXT_PUBLIC_API_URL=http://localhost:3333
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+> [!IMPORTANT]
+> No Next.js, variáveis que começam com `NEXT_PUBLIC_` são as únicas que podem ser acessadas pelo navegador. Se você mudar a porta do backend, lembre-se de atualizar este valor.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Comandos Disponíveis
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Comando | Descrição |
+| :--- | :--- |
+| `npm run dev` | Inicia o servidor de desenvolvimento em `localhost:3000` |
+| `npm run build` | Cria o pacote de produção otimizado |
+| `npm run start` | Inicia o servidor em modo de produção |
+| `npm run lint` | Verifica erros de formatação e código |
 
-## Learn More
+## 📁 Estrutura do Projeto
 
-To learn more about Next.js, take a look at the following resources:
+- `/src/app`: Rotas e páginas (App Router do Next.js)
+- `/src/components`: Componentes reutilizáveis (Botões, Cards, Modais)
+- `/src/lib`: Lógica de utilitários e integração com a API (`api.ts`, `auth.ts`)
+- `/public`: Ativos estáticos (Imagens, Ícones, Logo)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔗 Integração com a API
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+A integração centralizada acontece em `src/lib/api.ts`. Esta função `apiFetch`:
+- Adiciona automaticamente o `auth_token` do localStorage aos headers.
+- Trata erros e traduz mensagens vindas do backend.
+- Utiliza a variável `NEXT_PUBLIC_API_URL` configurada no ambiente.
 
-## Deploy on Vercel
+## 🎨 Design System
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+A plataforma utiliza um design moderno baseado em:
+- **Aesthetics**: Glassmorphism e gradientes suaves.
+- **Cores**: Azul WIISE (#0071A1) e Verde Esmeralda para ações positivas.
+- **Tipografia**: Outfit (Displays) e Inter (Conteúdo).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+Desenvolvido por **WIISEWELL Team**.
