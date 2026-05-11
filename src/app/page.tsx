@@ -34,8 +34,8 @@ export default function Home() {
         <div className={styles.container}>
           <h2 className={styles.sectionTitle}>Espaços ociosos não transformam realidades</h2>
           <p className={styles.sectionText}>
-            Galpões vazios são oportunidades perdidas. Enquanto estruturas premium ficam fechadas, 
-            educadores e ONGs lutam por um lugar digno para atuar. É hora de conectar infraestrutura 
+            Galpões vazios são oportunidades perdidas. Enquanto estruturas premium ficam fechadas,
+            educadores e ONGs lutam por um lugar digno para atuar. É hora de conectar infraestrutura
             de ponta com quem realmente faz a diferença.
           </p>
         </div>
@@ -46,7 +46,7 @@ export default function Home() {
         <Card className={styles.solutionCard}>
           <h2 className={styles.sectionTitle}>Um Hub de Impacto, Não um Aluguel</h2>
           <p className={styles.sectionText}>
-            Criamos uma ponte entre o alto padrão físico e a alta performance social. Aqui, o valor 
+            Criamos uma ponte entre o alto padrão físico e a alta performance social. Aqui, o valor
             de troca é o benefício que você gera para o próximo.
           </p>
           <p className={styles.impactPhrase}>
@@ -152,7 +152,7 @@ export default function Home() {
           <div className={styles.spaceInfo}>
             <h2 className={styles.sectionTitle}>Infraestrutura Premium</h2>
             <p className={styles.sectionText}>
-              Um ambiente desenhado para o alto desempenho. 500m² com acústica tratada, 
+              Um ambiente desenhado para o alto desempenho. 500m² com acústica tratada,
               iluminação profissional e internet de alta velocidade.
             </p>
             <ul className={styles.specs}>
@@ -173,7 +173,7 @@ export default function Home() {
         <Card className={styles.missionCard}>
           <h2 className={styles.sectionTitle}>Nossa Missão</h2>
           <p className={styles.sectionText}>
-            Nascemos do desejo de ver nossa região se tornar um polo de educação e inovação social. 
+            Nascemos do desejo de ver nossa região se tornar um polo de educação e inovação social.
             Utilizamos recursos de elite para o bem comum, com total transparência e relatórios públicos de impacto.
           </p>
         </Card>
@@ -207,6 +207,51 @@ export default function Home() {
         <h2 className={styles.ctaTitle}>Transforme seu projeto em impacto agora.</h2>
         <p className={styles.ctaSub}>O espaço está pronto. Só falta você.</p>
         <Link href="/booking"><Button variant="primary" className={styles.hugeButton}>Solicitar Minha Vaga</Button></Link>
+      </section>
+
+      {/* 13.5. LOCALIZAÇÃO */}
+      <section id="location" className={styles.locationSection}>
+        <h2 className={styles.sectionTitleCenter}>Onde Estamos</h2>
+        <div className={styles.locationGrid}>
+          <div className={styles.locationInfo}>
+            <Card className={styles.addressBox}>
+              <h3>Endereço</h3>
+              <p>
+                Av. Pres. Roosevelt, 78<br />
+                São Francisco, Niterói - RJ<br />
+                CEP: 24360-066
+              </p>
+            </Card>
+
+            <div className={styles.howToArrive}>
+              <h4>Como Chegar</h4>
+              <p>
+                Localizado no coração de São Francisco, nosso hub é facilmente acessível
+                por transporte público e possui estacionamento conveniado próximo.
+              </p>
+              <p>
+                <strong>De carro:</strong> Acesso principal pela Av. Quintino Bocaiúva,
+                entrando na Av. Pres. Roosevelt logo após o McDonald's.
+              </p>
+              <p>
+                <strong>De ônibus:</strong> Linhas que passam pela orla de São Francisco
+                param a poucos metros da nossa entrada.
+              </p>
+            </div>
+
+
+          </div>
+
+          <div className={styles.mapWrapper}>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14699.837327113106!2d-43.1035489516999!3d-22.9148708179806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x998401e9471b0b%3A0x91ab5a7621c26abf!2sAv.%20Pres.%20Roosevelt%2C%2078%20-%20S%C3%A3o%20Francisco%2C%20Niter%C3%B3i%20-%20RJ%2C%2024360-066!5e0!3m2!1spt-BR!2sbr!4v1778424367092!5m2!1spt-BR!2sbr"
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Mapa de Localização"
+            ></iframe>
+          </div>
+        </div>
       </section>
 
       {/* 14. FAQ */}
