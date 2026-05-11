@@ -33,6 +33,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+input, textarea, select {
+  color: var(--text-primary);
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.6;
+}
+
 body {
   min-height: 100vh;
   display: flex;

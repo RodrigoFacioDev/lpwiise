@@ -52,6 +52,12 @@
   font-family: inherit;
   font-size: 1rem;
   transition: all 0.2s;
+  color: var(--text-primary);
+}
+
+.input::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.6;
 }
 
 .input:focus {

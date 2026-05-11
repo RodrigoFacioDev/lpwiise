@@ -8,6 +8,7 @@
   align-items: flex-end;
   gap: 20px;
   font-family: var(--font-main), sans-serif;
+  pointer-events: none; /* Allow clicks to pass through the empty container area */
 }
 
 .fab {
@@ -25,6 +26,7 @@
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
+  pointer-events: all; /* Re-enable clicks for the button */
 }
 
 .fab:hover {
@@ -62,7 +64,7 @@
 .windowOpen {
   opacity: 1;
   transform: scale(1) translateY(0);
-  pointer-events: all;
+  pointer-events: all; /* Re-enable clicks when window is open */
 }
 
 .header {
